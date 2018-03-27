@@ -1,123 +1,155 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>DashBoard</title>
+	<title>Index page</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 </head>
+</head>
 <body>
-<div class="nav-bar">
-	<ul>
-	  <li><a class="active" href="#home">Ahex</a></li>
-	  <li><i class="fa fa-bars"></i></li>
-		<span class="notifications">
-		  	<span class="dropdown">
-			  	<li><i class="fa fa-envelope-o badge1" data-badge="4"></i>
-				  	<div class="dropdown-content scroll scroll1">
-					    <div>You have 4 messages</div>
-					    <div>
-					    	<img src="assets/images/user.jpg" alt="no image available">
-					    	<span>Loremlpsum Design Team
-					    		<small>Why don't You checkout this.</small>
-					    	</span>
-					    	<p><i class="fa fa-clock-o"></i> 5 mins</p>
-					    </div>
-					    <div>
-					    	<img src="assets/images/user-2.jpg" alt="no image available">
-					    	<span>Loremlpsum Design Team
-					    		<small>Why don't You checkout this.</small>
-					    	</span>
-					    	<p><i class="fa fa-clock-o"></i> 5 mins</p>
-					    </div>
-					    <div>
-					    	<img src="assets/images/user-3.jpg" alt="no image available">
-					    	<span>Loremlpsum Design Team
-					    		<small>Why don't You checkout this.</small>
-					    	</span>
-					    	<p><i class="fa fa-clock-o"></i> 5 mins</p>
-					    </div>
-					    <div>
-					    	<img src="assets/images/user-4.jpg" alt="no image available">
-					    	<span>Loremlpsum Design Team
-					    		<small>Why don't You checkout this.</small>
-					    	</span>
-					    	<p><i class="fa fa-clock-o"></i> 5 mins</p>
-					    </div>
-					    <div><a href="#">See All Messages</a></div>
-					</div>
-				</li>
-			</span>
-			<span class="bell-dropdown">
-		  		<li><i class="fa fa-bell-o badge2" data-badge="10"></i>
-			  		<div class="bell-dropdown-content scroll scroll1">
-						    <div>You have 10 Notifications</div>
-						    <div>
-						    	<p><i class="fa fa-users first-image"></i>5 New members joined today</p>
-						    </div>
-						    <div>	
-						    	<p><i class="fa fa-exclamation-triangle second-image"></i>Very long description that may not displayed here.</p>
-						    </div>
-						    <div>	
-						    	<p><i class="fa fa-users third-image"></i>5 New members joined</p>
-						    </div>
-						    <div>	
-						    	<p><i class="fa fa-shopping-cart fourth-image"></i>25 sales made</p>
-						    </div>
-						    <div>	
-						    	<p><i class="fa fa-user fifth-image"></i>You changes your username</p>
-						    </div>
-						    <div>
-						    	<a href="#" class="link">View All</a>
-						    </div>
-					</div>
-		  		</li>
-		    </span>
-
-		    <span class="flag-dropdown">
-			  	<li><i class="fa fa-flag-o badge3" data-badge="9"></i>
-			  		<div class="flag-dropdown-content scroll scroll1">
-				  		<div class="flag-content">You have 9 tasks</div>
-				  		<div class="flag-content">
-				  			<p>Design some buttons<span class="progress-status">9%</span></p>
-				  			<div class="progress">
-		 						<div class="progress-bar" role="progressbar" style="width:10%; background-color: rgb(0,192,239);"></div>
-							</div>
-				  		</div>
-				  		<div class="flag-content">
-				  			<p>Create a nice theme<span class="progress-status">19%</span></p>
-				  			<div class="progress">
-		 						<div class="progress-bar" role="progressbar" style="width:20%; background-color: rgb(0,166,90);"></div>
-							</div>
-				  		</div>
-				  		<div class="flag-content">
-				  			<p>Some task I need to do<span class="progress-status">29%</span></p>
-				  			<div class="progress">
-		 						<div class="progress-bar" role="progressbar" style="width:29%; background-color: rgb(221,75,57);"></div>
-							</div>
-				  		</div>
-				  		<div class="flag-content">
-				  			<p>Make beautiful transitions<span class="progress-status">69%</span></p>
-				  			<div class="progress">
-		 						<div class="progress-bar" role="progressbar" style="width:69%; background-color: rgb(0,192,239);"></div>
-							</div>
-				  		</div>
-				  		<div class="flag-content">
-				  			<p>Design some buttons<span class="progress-status">9%</span></p>
-				  			<div class="progress">
-		 						<div class="progress-bar" role="progressbar" style="width:10%; background-color: rgb(0,192,239);"></div>
-							</div>
-				  		</div>
-			  		</div>
-			    </li>
-		  	</span>
-		  	<li>
-		  		
-<div class="position">
-			  		<img src="assets/images/user.jpg">
-				  	<span class="user-name">Swami Srivastava</span>
-			    </div>
+	<div class="navbar">
+	<div class="inline-block pd0">
+		<div class="inline-block navbar-brand">Ahex</div>
+		<div class="inline-block"><a href="#"><i class="fa fa-bars"></i></a></div>
+	</div>
+	<div class="pull-right pd0">
+	<div class="dropdown inline-block pb0">
+		<div class="inline-block"><a href="#"><i class="fa fa-envelope-o badge1" data-badge="4"></i></a>
+		  <div class="dropdown-content" id="messages-dropdown">
+		    <p>You have 4 messages</p>
+		    <div class="messages scroll scroll1">
+		    	<div class="message1">
+		    		<img src="assets/images/user-1.jpg" class="pull-left">
+		    		<p>Loremlpsum Design Team</p>
+		    		<span class="pull-right"><i class="fa fa-clock-o"></i> 5 mins</span>
+		    		<p>Why don't You checkout this.</p>
+		    	</div>
+		    	<div class="message1">
+		    		<img src="assets/images/user-2.jpg" class="pull-left">
+		    		<p>Loremlpsum Design Team</p>
+		    		<span class="pull-right"><i class="fa fa-clock-o"></i> 5 mins</span>
+		    		<p>Why don't You checkout this.</p>
+		    	</div>
+		    		<div class="message1">
+		    		<img src="assets/images/user-2.jpg" class="pull-left">
+		    		<p>Loremlpsum Design Team</p>
+		    		<span class="pull-right"><i class="fa fa-clock-o"></i> 5 mins</span>
+		    		<p>Why don't You checkout this.</p>
+		    	</div>
+		    		<div class="message1">
+		    		<img src="assets/images/user-3.jpg" class="pull-left">
+		    		<p>Loremlpsum Design Team</p>
+		    		<span class="pull-right"><i class="fa fa-clock-o"></i> 5 mins</span>
+		    		<p>Why don't You checkout this.</p>
+		    	</div>
+		    	<div class="message1">
+		    		<img src="assets/images/user-1.jpg" class="pull-left">
+		    		<p>Loremlpsum Design Team</p>
+		    		<span class="pull-right"><i class="fa fa-clock-o"></i> 5 mins</span>
+		    		<p>Why don't You checkout this.</p>
+		    	</div>
+		    	<div class="message1">
+		    		<img src="assets/images/user-2.jpg" class="pull-left">
+		    		<p>Loremlpsum Design Team</p>
+		    		<span class="pull-right"><i class="fa fa-clock-o"></i> 5 mins</span>
+		    		<p>Why don't You checkout this.</p>
+		    	</div>
+		    </div>
+		    <p class="see-all-messages"><a href="">See All Messages</a></p>
+		  </div>
+		</div>
+	</div>
+	<div class="dropdown inline-block pb0">
+		<div class="inline-block"><a href="#"><i class="fa fa-bell-o badge2" data-badge="10"></i></a>
+			<div class="dropdown-content" id="notifications-dropdown">
+				<p>You have 10 Notifications</p>
+				<div class="messages scroll scroll1">
+			    	<div class="message1">
+		    			<span><i class="fa fa-users notifications-image first-image"></i>
+		    			5 new members Joined today</span>
+			    	</div>
+			    	<div class="message1">
+		    			<span><i class="fa fa-exclamation-triangle notifications-image"></i>
+		    			Very long description that may not displayed here.</span>
+			    	</div>
+			    	<div class="message1">
+		    			<span><i class="fa fa-users notifications-image"></i>
+		    			5 new members Joined</span>
+			    	</div>
+			    	<div class="message1">
+		    			<span><i class="fa fa-shopping-cart notifications-image"></i>
+		    			25 sales made</span>
+			    	</div>
+			    	<div class="message1">
+		    			<span><i class="fa fa-user notifications-image"></i>
+		    			You changes your username</span>
+			    	</div>
+			    	<div class="message1">
+		    			<span><i class="fa fa-exclamation-triangle notifications-image"></i>
+		    			Very long description that may not displayed here.</span>
+			    	</div>
+			    	<div class="message1">
+		    			<span><i class="fa fa-exclamation-triangle notifications-image"></i>
+		    			Very long description that may not displayed here.</span>
+			    	</div>
+			    	<div class="message1">
+		    			<span><i class="fa fa-exclamation-triangle notifications-image"></i>
+		    			Very long description that may not displayed here.</span>
+			    	</div>
+				</div>
+				<p class="see-all-messages"><a href="">View all</a></p>
+			</div>
+		</div>
+	</div>
+	<div class="dropdown inline-block pb0">
+		<div class="inline-block">
+			<a href="#"><i class="fa fa-flag-o badge3" data-badge="9"></i></a>
+			<div class="dropdown-content" id="tasks-dropdown">
+					<p>You have 9 tasks</p>
+				<div class="messages scroll scroll1">
+					<div class="message1">
+		    			<span class="tasks-caption">Design some buttons.<span class="progress-status">9%</span></span>
+		    			<div class="progress">
+	 						<div class="lightblue-progress-bar" role="progressbar" style="width:9%;">
+	 						</div>
+						</div>
+				    </div>
+				    <div class="message1">
+		    			<span class="tasks-caption">Create a nice theme.<span class="progress-status">19%</span></span>
+		    			<div class="progress">
+	 						<div class="green-progress-bar" role="progressbar" style="width:19%;">
+	 						</div>
+						</div>
+				    </div>
+				    <div class="message1">
+		    			<span class="tasks-caption">Some task I need to do.<span class="progress-status">29%</span></span>
+		    			<div class="progress">
+	 						<div class="red-progress-bar" role="progressbar" style="width:29%;">
+	 						</div>
+						</div>
+				    </div>
+				    <div class="message1">
+		    			<span class="tasks-caption">Make beautiful transistions<span class="progress-status">68%</span></span>
+		    			<div class="progress">
+	 						<div class="lightblue-progress-bar" role="progressbar" style="width:68%;"></div>
+						</div>
+				    </div>
+				</div>
+				<p class="see-all-messages"><a href="">View all tasks</a></p>
+			</div>
+		</div>
+	</div>
+		
+		<div class="position inline-block">
+			<img src="assets/images/user-1.jpg">
+			<span><a href="#">Swami Srivastava</a></span>
+		</div>
+		<div class="inline-block"><a href="#"><i class="fa fa-cogs"></i></a></div>
+	</div>
+</div>
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="assets/jquery/script.js"></script>
+<script src="assets/jQuery/script.js"></script>
 </body>
 </html>
