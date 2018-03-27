@@ -1,0 +1,327 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.nav-bar {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        border: 1px solid #e7e7e7;
+        background-color: rgb(60, 141, 188);
+        & li {
+            float: left;
+        }
+        & li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        & .notifications {
+            float: right;
+            & li {
+                padding-left: 17px;
+                padding-right: 18px;
+            }
+        }
+        & li a:hover:not(.active) {
+            background-color: #ddd;
+        }
+        & li i {
+            padding-left: 0px;
+            color: white;
+            position: relative;
+            margin-top: 15px;
+        }
+        & li img {
+            border-radius: 50%;
+            height: 30px;
+            margin-top: 10px;
+        }
+        .user-name {
+            position: relative;
+            bottom: 8px;
+            left: 3px;
+            color: white;
+        }
+        .active {
+            width: 250px;
+            background-color: rgb(54, 127, 169);
+        }
+
+        & .fa-bars {
+            padding-left: 15px;
+        }
+
+        & li i .badge1 {
+            position: relative;
+        }
+        .badge1[data-badge]:after {
+            content: attr(data-badge);
+            position: absolute;
+            top: -8px;
+            right: -10px;
+            font-size: .7em;
+            background: green;
+            color: white;
+            width: 12px;
+            height: 15px;
+            text-align: center;
+            line-height: 15px;
+            border-radius: 2px;
+            box-shadow: 0 0 1px #333;
+        }
+        .badge2 {
+            @extend .badge1;
+        }
+        .badge2[data-badge]:after {
+            width: 15px;
+            height: 15px;
+            background-color: orange;
+        }
+        .badge3 {
+            @extend .badge1;
+        }
+        .badge3[data-badge]:after {
+            border-radius: 2px;
+            background-color: red;
+            width: 10px;
+            height: 15px;
+        }
+    }
+
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        margin-top: 13px;
+        background-color: #f1f1f1;
+        min-width: 330px;
+        z-index: 1;
+        border-left: 0.8px solid black;
+    }
+    .dropdown-content div {
+        color: black;
+        background-color: white;
+        text-decoration: none;
+        display: block;
+        border-bottom: 1px solid black;
+    }
+    .dropdown-content div:first-child {
+        text-align: left;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 50px;
+        padding-left: 8px;
+    }
+    .dropdown-content div:last-child {
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 50px;
+        padding-left: 10px;
+        & a {
+            color: black;
+            text-align: center;
+            padding: 7px 0px !important;
+            &:hover {
+                background-color: white;
+            }
+        }
+    }
+    .dropdown-content img {
+        width: 45px;
+        height: 45px;
+        margin-left: 6px;
+    }
+    small {
+        display: block;
+        margin-top: 2px;
+    }
+    .dropdown-content span {
+        position: absolute;
+        margin-top: 13px;
+        left: 56px;
+    }
+    .dropdown-content p {
+        float: right;
+    }
+    .dropdown-content i {
+        color: black;
+    }
+
+    .fa {
+        cursor: pointer;
+    }
+
+    .dropdown-content p {
+        margin-top: 0px;
+        font-size: 12px;
+        padding-right: 10px;
+    }
+    .dropdown-content a:hover {
+        background-color: #ddd
+    }
+}
+
+
+.bell-dropdown-content {
+    position: absolute;
+    display: none;
+    margin-top: 14px !important;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color: white;
+    min-width: 330px;
+    z-index: 1;
+    & div:first-child {
+        text-align: left;
+        padding: 10px !important;
+    }
+    & div:last-child {
+        text-align: center;
+        border-bottom: none;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 50px;
+        padding-left: 10px;
+        & a {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 5px 34px;
+            text-decoration: none;
+        }
+        & a:hover {
+            background-color: white !important;
+        }
+    }
+
+    & p {
+        margin-top: 0px;
+        margin-bottom: 5px;
+    }
+
+    & div {
+        border-bottom: 1px solid black;
+    }
+
+    & p {
+        padding: 8px auto 8px 20px;
+    }
+
+    & p i {
+        margin-left: 10px;
+        padding-right: 10px;
+    }
+
+    .first-image {
+        color: rgb(2, 196, 243);
+    }
+
+    .second-image {
+        color: rgb(243, 156, 18);
+    }
+
+    .third-image {
+        color: rgb(222, 100, 95);
+    }
+
+    .fourth-image {
+        color: rgb(0, 166, 90);
+    }
+
+    .fifth-image {
+        color: rgb(221, 75, 57);
+    }
+}
+
+
+.flag-dropdown-content {
+    position: absolute;
+    display: none;
+    right: 240px;
+    margin-top: 14px !important;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color: white;
+    min-width: 330px;
+    & .flag-content {
+        padding: 5px 0px 5px 10px;
+        border-bottom: 1px solid black;
+        & p {
+            margin-bottom: 10px;
+            margin-top: 5px;
+        }
+    }
+}
+
+
+
+
+.progress {
+    height: 10px;
+    margin-bottom: 11px;
+    overflow: hidden;
+    width: 308px;
+    background-color: #f5f5f5;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+}
+
+.progress-bar {
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: 12px;
+    line-height: 10px;
+    color: #fff;
+    text-align: center;
+    -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+    -webkit-transition: width .6s ease;
+    -o-transition: width .6s ease;
+    transition: width .6s ease;
+}
+
+.progress-status {
+
+    float: right;
+    padding-right: 13px;
+    padding-top: 8px;
+}
+
+.scroll {
+    width: 20px;
+    height: 200px;
+    overflow: auto;
+    float: left;
+    margin: 0 10px;
+}
+
+.scroll1::-webkit-scrollbar {
+    width: 5px;
+}
+
+.scroll1::-webkit-scrollbar-track {
+    background: #ddd;
+}
+
+.scroll1::-webkit-scrollbar-thumb {
+    background: #666;
+}
+
+
+.position{
+    position:relative;
+}
+
+     img{
+        border-radius:50%  !important;
+    }
