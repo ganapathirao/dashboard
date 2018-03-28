@@ -20,7 +20,8 @@ body {
   .navbar i {
     color: white; }
   .navbar .navbar-brand {
-    padding: 15px 120px;
+    padding: 12px 112px;
+    font-size: 23px;
     font-weight: bold;
     background-color: #367fa9; }
   .navbar .badge1[data-badge]:after {
@@ -49,7 +50,7 @@ body {
     float: left; }
   .navbar .pull-right {
     float: right;
-    margin-top: -15px; }
+    margin-top: -12px; }
   .navbar .caption {
     font-size: 13px;
     padding-top: 4px; }
@@ -252,23 +253,26 @@ body {
 
 .side-nav {
   float: left;
+  font-size: 14px;
   width: 276px;
   color: white !important;
   overflow: hidden;
   background-color: #1e282c;
   height: auto; }
+  .side-nav .fa {
+    color: #b8c7ce; }
   .side-nav a {
     text-decoration: none;
-    color: white; }
+    color: #b8c7ce; }
   .side-nav .position {
     position: relative;
     padding: 14px;
-    padding-left: 75px;
+    padding-left: 68px;
     margin-bottom: 12px; }
     .side-nav .position img {
       position: absolute;
       left: 10px;
-      height: 50px;
+      height: 46px;
       border-radius: 50%;
       transform: translateY(-50%);
       top: 50%; }
@@ -359,17 +363,27 @@ body {
       float: right !important;
       line-height: 16px !important; }
   .side-nav .charts {
+    position: relative;
     padding-top: 4px;
-    padding-left: 8px;
+    padding-left: 15px;
     padding-bottom: 0px;
-    border-left: 5px solid blue;
+    color: white;
     background-color: #1e282c; }
+    .side-nav .charts:before {
+      content: " ";
+      position: absolute;
+      background-color: #3c8dbc;
+      height: 40px;
+      width: 3px;
+      top: 0px;
+      left: 0px; }
+    .side-nav .charts .fa-pie-chart, .side-nav .charts .chart-header {
+      color: white !important; }
     .side-nav .charts span {
       padding-top: 10px;
       padding-bottom: 10px; }
     .side-nav .charts .charts-childs {
-      background-color: #222d32;
-      border-left: 0px solid; }
+      background-color: #222d32; }
     .side-nav .charts ul li {
       list-style-type: none; }
     .side-nav .charts .chartjs {
@@ -389,7 +403,7 @@ body {
       content: "3";
       position: absolute;
       right: 8px;
-      bottom: 13px;
+      bottom: 11px;
       background-color: #dd4b39;
       width: 18px;
       height: 18px;
@@ -402,11 +416,11 @@ body {
       background: #0073b7;
       position: relative !important;
       right: 20px !important;
-      width: 20px !important;
+      width: 23px !important;
       height: 18px !important;
       top: 2px !important;
       float: right !important;
-      line-height: 16px !important; }
+      line-height: 18px !important; }
   .side-nav .mailbox {
     position: relative; }
     .side-nav .mailbox:after {
@@ -441,9 +455,20 @@ body {
       right: 53px !important;
       width: 20px !important;
       height: 18px !important;
-      top: 2px !important;
+      top: 0px !important;
       float: right !important;
       line-height: 16px !important; }
+  .side-nav .label-option {
+    padding: 15px; }
+    .side-nav .label-option .label-important {
+      padding-right: 10px;
+      color: #b93532; }
+    .side-nav .label-option .label-warning {
+      padding-right: 10px;
+      color: #ec931c; }
+    .side-nav .label-option .label-info {
+      padding-right: 10px;
+      color: #00a4a6; }
 
 .navbar .badge1, .navbar .badge2, .navbar .badge3, .side-nav .layout .badge1, .side-nav .widget .badge1, .side-nav .calender .badge1, .side-nav .mailbox .badge1 {
   position: relative; }
