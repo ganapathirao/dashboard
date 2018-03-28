@@ -30,7 +30,7 @@ $(document).ready(function(){
 
 	$(".toggle-side-nav").click(function(){
 	    $(".side-nav").animate({
-	      height: "toggle"
+	      width: "toggle"
 	    });
 	});
 
