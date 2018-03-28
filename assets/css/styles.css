@@ -1,6 +1,18 @@
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../fonts/HelveticaNeue/HelveticaNeue.eot");
+  src: url("../fonts/HelveticaNeue/HelveticaNeue.woff") format("woff"), url("../fonts/HelveticaNeue/HelveticaNeue.ttf") format("truetype"), url("../fonts/HelveticaNeue/HelveticaNeue.svg#filename") format("svg"); }
+
+@font-face {
+  font-family: "Helvetica Neue Thin";
+  src: url("../fonts/HelveticaNeue/HelveticaNeue.eot");
+  src: url("../fonts/HelveticaNeue-Thin/HelveticaNeue-Thin.woff") format("woff"), url("../fonts/HelveticaNeue-Thin/HelveticaNeue-Thin.ttf") format("truetype"), url("../fonts/HelveticaNeue-Thin/HelveticaNeue-Thin.svg#filename") format("svg"); }
+
 body {
   padding: 0px;
-  margin: 0px; }
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue"; }
 
 .navbar {
   color: white;
@@ -8,29 +20,29 @@ body {
   .navbar i {
     color: white; }
   .navbar .navbar-brand {
-    padding: 15px 100px;
+    padding: 15px 120px;
+    font-weight: bold;
     background-color: #367fa9; }
   .navbar .badge1[data-badge]:after {
-    background: green; }
+    background: green;
+    position: absolute;
+    top: -9px;
+    right: -10px;
+    line-height: 14px; }
   .navbar .badge2[data-badge]:after {
-    background: orange; }
+    background: orange;
+    position: absolute;
+    top: -9px;
+    right: -10px;
+    line-height: 14px; }
+  .navbar .user-name {
+    cursor: pointer; }
   .navbar .badge3[data-badge]:after {
-    background: #dd4b39; }
-  .navbar .badge1, .navbar .badge2, .navbar .badge3 {
-    position: relative; }
-    .navbar .badge1[data-badge]:after, .navbar .badge2[data-badge]:after, .navbar .badge3[data-badge]:after {
-      content: attr(data-badge);
-      position: absolute;
-      top: -9px;
-      right: -10px;
-      font-size: .7em;
-      color: white;
-      width: 12px;
-      height: 13px;
-      text-align: center;
-      line-height: 14px;
-      border-radius: 4%;
-      box-shadow: 0 0 1px #333; }
+    background: #dd4b39;
+    position: absolute;
+    top: -9px;
+    right: -10px;
+    line-height: 14px; }
   .navbar .inline-block {
     display: inline-block; }
   .navbar .pull-left {
@@ -38,8 +50,15 @@ body {
   .navbar .pull-right {
     float: right;
     margin-top: -15px; }
+  .navbar .caption {
+    font-size: 13px;
+    padding-top: 4px; }
   .navbar .pd0 {
     padding: 0px; }
+  .navbar .time {
+    font-size: 10px; }
+  .navbar .fa-clock-o {
+    font-size: 10px !important; }
   .navbar .position {
     position: relative;
     padding: 14px;
@@ -67,7 +86,7 @@ body {
 
 .dropdown-content {
   display: none;
-  width: 400px;
+  width: 320px;
   position: absolute;
   right: 0;
   top: 63px;
@@ -87,7 +106,7 @@ body {
     color: black;
     text-decoration: none; }
   .see-all-messages a:hover {
-    background-color: red; }
+    background-color: white !important; }
 
 .dropdown-content p, span {
   color: black;
@@ -132,42 +151,74 @@ body {
 .scroll1::-webkit-scrollbar-thumb {
   background: #666; }
 
-#notifications-dropdown .message1 {
-  padding-right: 10px;
-  padding-left: 10px; }
+#notifications-dropdown {
+  width: 304px; }
+  #notifications-dropdown .message1 {
+    padding-right: 10px;
+    padding-left: 10px; }
+  #notifications-dropdown span {
+    padding: 3px 0px 3px 8px; }
+  #notifications-dropdown .notifications-image {
+    margin-right: 5px; }
+  #notifications-dropdown .first-image {
+    color: #00c0ef !important; }
+  #notifications-dropdown .fa-exclamation-triangle {
+    color: #f39c12; }
+  #notifications-dropdown .fa-users {
+    color: #dd4b39; }
+  #notifications-dropdown .fa-shopping-cart {
+    color: #00a65a; }
+  #notifications-dropdown .fa-user {
+    color: #dd4b39; }
 
-#notifications-dropdown span {
-  padding: 3px 61px 3px 8px; }
+#tasks-dropdown {
+  width: 306px; }
+  #tasks-dropdown .task-caption {
+    padding-bottom: 10px; }
+  #tasks-dropdown .lightblue-progress-bar {
+    background-color: #00c0ef; }
+  #tasks-dropdown .red-progress-bar {
+    background-color: #dd4b39; }
+  #tasks-dropdown .green-progress-bar {
+    background-color: #00a65a; }
 
-#notifications-dropdown .notifications-image {
-  margin-right: 5px; }
-
-#notifications-dropdown .first-image {
-  color: #00c0ef !important; }
-
-#notifications-dropdown .fa-exclamation-triangle {
-  color: #f39c12; }
-
-#notifications-dropdown .fa-users {
-  color: #dd4b39; }
-
-#notifications-dropdown .fa-shopping-cart {
-  color: #00a65a; }
-
-#notifications-dropdown .fa-user {
-  color: #dd4b39; }
-
-#tasks-dropdown .task-caption {
-  padding-bottom: 10px; }
-
-#tasks-dropdown .lightblue-progress-bar {
-  background-color: #00c0ef; }
-
-#tasks-dropdown .red-progress-bar {
-  background-color: #dd4b39; }
-
-#tasks-dropdown .green-progress-bar {
-  background-color: #00a65a; }
+#user-dropdown {
+  width: 320px;
+  top: 48px; }
+  #user-dropdown .user-details {
+    padding-top: 5px;
+    background-color: #3c8dbc; }
+  #user-dropdown .user-details img {
+    border: 3px solid #55bac5;
+    display: block;
+    margin: 5px auto 20px auto;
+    border-radius: 50%;
+    height: 70px;
+    position: sticky !important; }
+  #user-dropdown p {
+    color: white;
+    text-align: center;
+    padding-top: 5px; }
+  #user-dropdown a {
+    color: black; }
+  #user-dropdown .about-user {
+    padding-left: 0px;
+    padding-right: 0px; }
+    #user-dropdown .about-user a {
+      padding: 15px; }
+    #user-dropdown .about-user .sales {
+      margin-left: 22px; }
+    #user-dropdown .about-user .friends {
+      margin-left: 38px; }
+  #user-dropdown .sign-out {
+    color: black;
+    background-color: #f9f9f9;
+    padding: 0px; }
+    #user-dropdown .sign-out a {
+      background-color: #f4f4f4;
+      padding: 10px; }
+    #user-dropdown .sign-out .sign-out-option {
+      float: right; }
 
 .progress {
   margin-bottom: 5px;
@@ -176,7 +227,7 @@ body {
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   padding: 0px 60px 0px 0px !important;
-  width: 306px;
+  width: 205px;
   height: 10px; }
 
 #tasks-dropdown .lightblue-progress-bar, #tasks-dropdown .red-progress-bar, #tasks-dropdown .green-progress-bar {
@@ -198,3 +249,210 @@ body {
   float: right;
   padding-right: 13px;
   padding-top: 8px; }
+
+.side-nav {
+  float: left;
+  width: 276px;
+  color: white !important;
+  overflow: hidden;
+  background-color: #1e282c;
+  height: auto; }
+  .side-nav a {
+    text-decoration: none;
+    color: white; }
+  .side-nav .position {
+    position: relative;
+    padding: 14px;
+    padding-left: 75px;
+    margin-bottom: 12px; }
+    .side-nav .position img {
+      position: absolute;
+      left: 10px;
+      height: 50px;
+      border-radius: 50%;
+      transform: translateY(-50%);
+      top: 50%; }
+    .side-nav .position p {
+      font-weight: bold;
+      margin-top: 5px;
+      font-size: 13px;
+      margin-bottom: 8px; }
+    .side-nav .position .status {
+      font-size: 10px;
+      color: white !important;
+      position: relative;
+      padding-left: 15px; }
+      .side-nav .position .status:before {
+        content: "";
+        position: absolute;
+        height: 8px;
+        left: 0px;
+        top: 2px;
+        width: 8px;
+        background-color: green;
+        border-radius: 50%; }
+  .side-nav .search {
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative; }
+    .side-nav .search .search-input {
+      padding: 10px;
+      padding-right: 35px;
+      border: 0;
+      background-color: #374850;
+      border-radius: 7px;
+      width: 100%;
+      box-sizing: border-box;
+      display: block; }
+      .side-nav .search .search-input.active.focus, .side-nav .search .search-input.active:focus, .side-nav .search .search-input.focus, .side-nav .search .search-input:active.focus, .side-nav .search .search-input:active:focus, .side-nav .search .search-input:focus {
+        outline: 0; }
+  .side-nav .fa-search {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer; }
+  .side-nav h4 {
+    background-color: #1a2226;
+    padding-left: 14px;
+    font-size: 15px;
+    padding-top: 8px;
+    margin-bottom: 0px;
+    margin-top: 9px;
+    padding-bottom: 8px;
+    color: #3b5b45;
+    text-align: left;
+    font-weight: lighter; }
+  .side-nav .nav-item {
+    padding-left: 14px;
+    padding-right: 10px; }
+    .side-nav .nav-item span {
+      color: white; }
+    .side-nav .nav-item i {
+      padding-right: 10px; }
+  .side-nav .dashboard {
+    padding-bottom: 20px; }
+  .side-nav .layout {
+    padding-top: 10px;
+    padding-bottom: 13px;
+    padding-right: 15px; }
+    .side-nav .layout .badge1[data-badge]:after {
+      background: #3c8dbc;
+      position: relative !important;
+      right: 0px !important;
+      top: 2px !important;
+      float: right !important;
+      width: 20px !important;
+      height: 17px !important;
+      line-height: 16px !important; }
+  .side-nav .widget {
+    padding-top: 13px;
+    padding-right: 15px;
+    padding-bottom: 12px; }
+    .side-nav .widget .badge1[data-badge]:after {
+      background: #06a65a;
+      position: relative !important;
+      right: 0px !important;
+      width: 35px !important;
+      height: 18px !important;
+      top: 2px !important;
+      float: right !important;
+      line-height: 16px !important; }
+  .side-nav .charts {
+    padding-top: 4px;
+    padding-left: 8px;
+    padding-bottom: 0px;
+    border-left: 5px solid blue;
+    background-color: #1e282c; }
+    .side-nav .charts span {
+      padding-top: 10px;
+      padding-bottom: 10px; }
+    .side-nav .charts .charts-childs {
+      background-color: #222d32;
+      border-left: 0px solid; }
+    .side-nav .charts ul li {
+      list-style-type: none; }
+    .side-nav .charts .chartjs {
+      padding-top: 10px;
+      padding-bottom: 5px; }
+    .side-nav .charts .morris {
+      padding-top: 0px;
+      padding-bottom: 10px; }
+    .side-nav .charts .flot {
+      padding-top: 0px; }
+  .side-nav .dashboard, .side-nav .layout, .side-nav .widget, .side-nav .table, .side-nav .calender, .side-nav .mailbox, .side-nav .forms, .side-nav .ui-elements, .side-nav .examples, .side-nav .multilevel, .side-nav .doumentation {
+    padding-top: 15px;
+    padding-bottom: 15px; }
+  .side-nav .calender {
+    position: relative; }
+    .side-nav .calender:after {
+      content: "3";
+      position: absolute;
+      right: 8px;
+      bottom: 13px;
+      background-color: #dd4b39;
+      width: 18px;
+      height: 18px;
+      color: white;
+      border-radius: 15%;
+      text-align: center;
+      font-size: 13px;
+      line-height: 17px; }
+    .side-nav .calender .badge1[data-badge]:after {
+      background: #0073b7;
+      position: relative !important;
+      right: 20px !important;
+      width: 20px !important;
+      height: 18px !important;
+      top: 2px !important;
+      float: right !important;
+      line-height: 16px !important; }
+  .side-nav .mailbox {
+    position: relative; }
+    .side-nav .mailbox:after {
+      content: "12";
+      position: absolute;
+      right: 8px;
+      bottom: 13px;
+      background-color: #f39c12;
+      width: 25px;
+      height: 18px;
+      color: white;
+      border-radius: 15%;
+      text-align: center;
+      font-size: 13px;
+      line-height: 17px; }
+    .side-nav .mailbox:before {
+      content: "16";
+      position: absolute;
+      right: 36px;
+      bottom: 13px;
+      background-color: #00a65a;
+      width: 25px;
+      height: 18px;
+      color: white;
+      border-radius: 15%;
+      text-align: center;
+      font-size: 13px;
+      line-height: 17px; }
+    .side-nav .mailbox .badge1[data-badge]:after {
+      background: #dd4b39;
+      position: relative !important;
+      right: 53px !important;
+      width: 20px !important;
+      height: 18px !important;
+      top: 2px !important;
+      float: right !important;
+      line-height: 16px !important; }
+
+.navbar .badge1, .navbar .badge2, .navbar .badge3, .side-nav .layout .badge1, .side-nav .widget .badge1, .side-nav .calender .badge1, .side-nav .mailbox .badge1 {
+  position: relative; }
+  .navbar .badge1[data-badge]:after, .navbar .badge2[data-badge]:after, .navbar .badge3[data-badge]:after, .side-nav .layout .badge1[data-badge]:after, .side-nav .widget .badge1[data-badge]:after, .side-nav .calender .badge1[data-badge]:after, .side-nav .mailbox .badge1[data-badge]:after {
+    content: attr(data-badge);
+    font-size: .7em;
+    color: white;
+    width: 12px;
+    height: 13px;
+    text-align: center;
+    border-radius: 15%;
+    box-shadow: 0 0 1px #333; }
